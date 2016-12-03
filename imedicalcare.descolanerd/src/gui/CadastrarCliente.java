@@ -5,6 +5,8 @@
  */
 package gui;
 
+import java.awt.Dimension;
+
 /**
  *
  * @author vitor_000
@@ -128,6 +130,10 @@ public class CadastrarCliente extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+      public void setPosicao() {
+        Dimension d = this.getDesktopPane().getSize();
+        this.setLocation((d.width - this.getSize().width) / 2, (d.height - this.getSize().height) / 2);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
