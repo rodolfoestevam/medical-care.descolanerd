@@ -9,7 +9,6 @@ import imedicalcare.descolanerd.exceptions.ConexaoException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 /**
  *
@@ -26,7 +25,7 @@ public class ConnectionFactory {
         try{     
         Class.forName(driver);
         conexao = DriverManager.getConnection(url, user, password);
-        }catch(SQLException | ClassNotFoundException e){
+        }catch(SQLException | ClassNotFoundException e){    
             throw new ConexaoException(e);
         }
         return conexao;
